@@ -1,71 +1,167 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>حساباتي الشخصية</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      padding: 50px 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>حساباتي الشخصية</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+        }
 
-    img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid #8800ff;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
+        img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid #8800ff;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
 
-    h1 {
-      color: #8800ff;
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
+        h1 {
+            color: #8800ff;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
 
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
 
-    .button {
-      display: inline-block;
-      background-color: #8800ff;
-      color: white;
-      padding: 10px 20px;
-      margin: 10px;
-      text-decoration: none;
-      border-radius: 25px;
-      transition: 0.3s;
-    }
+        .acounts {
+            display: flex;
+            justify-content: center;
+        }
 
-    .button:hover {
-      background-color: #a74eff;
-    }
+        .tiktok,
+        .whatsapp,
+        .instagram,
+        .Telegram,
+        .facebook {
+            display: block;
+            border-radius: 8px;
+            padding: 8px;
+            width: 112px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
 
-    .subscribe {
-      margin-top: 30px;
-      font-size: 16px;
-    }
-  </style>
+        }
+
+        .tiktok {
+            border: 2px solid black;
+        }
+
+        .tiktok:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .whatsapp {
+            border: 2px solid rgb(0, 255, 0);
+        }
+
+        .whatsapp:hover {
+            background-color: rgb(0, 255, 0);
+            color: white;
+        }
+
+        .instagram {
+            border: 2px solid purple;
+        }
+
+        .instagram:hover {
+            background-color: purple;
+            color: white;
+        }
+
+        .Telegram {
+            border: 2px solid rgb(0, 68, 255);
+        }
+
+        .Telegram:hover {
+            background-color: rgb(0, 68, 255);
+            color: white;
+        }
+
+        .facebook {
+            border: 2px solid rgb(0, 4, 255);
+        }
+
+        .facebook:hover {
+            background-color: rgb(0, 4, 255);
+            color: white;
+        }
+
+        .subscribe {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+
+        /* Media Query للهواتف */
+        @media (max-width: 600px) {
+            .acounts {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .acounts a {
+                width: 80%;
+                /* عرض أكبر على الهاتف */
+                font-size: 18px;
+            }
+
+            img {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .subscribe {
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <img src="media/صورة.jpg" alt="صورة شخصية" />
-  <h1>يوسف خالد</h1>
-  <p>موقعي الرسمي وروابط حساباتي</p>
+    <img src="media/صورة.jpg" alt="صورة شخصية" />
+    <h1>يوسف خالد</h1>
+    <p>موقعي الرسمي وروابط حساباتي</p>
 
-  <a class="button" href="https://www.facebook.com/share/14H26egVfCj/" target="_blank">فيسبوك</a>
-  <a class="button" href="https://t.me/YKHelhajar" target="_blank">قناة التيليجرام</a>
-  <a class="button" href="https://www.instagram.com/ysfelspa3y?igsh=NDZhM2p2NW9jb2o=" target="_blank">انستجرام</a>
-  <a class="button" href="https://www.tiktok.com/@ysf_e1spa3y0" target="_blank">تيك توك</a>
+    <div class="acounts">
+        <a class="facebook" href="https://www.facebook.com/share/14H26egVfCj/" target="_blank">
+            <i class="fab fa-facebook"></i> فيسبوك
+        </a>
 
-  <p class="subscribe">فضلاً وليس أمراً، تابعني ❤️</p>
+        <a class="Telegram" href="https://t.me/YKHelhajar" target="_blank">
+            <i class="fab fa-telegram"></i> قناة التيليجرام
+        </a>
+
+        <a href="https://www.tiktok.com/@ysf_e1spa3y0" target="_blank" class="tiktok">
+            <i class="fab fa-tiktok"></i> تيك توك
+        </a>
+
+        <a href="https://www.instagram.com/ysfelspa3y?igsh=NDZhM2p2NW9jb2o=" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i> إنستغرام
+        </a>
+    </div>
+    <p class="subscribe">فضلاً وليس أمراً، تابعني ❤️</p>
 
 </body>
+
 </html>

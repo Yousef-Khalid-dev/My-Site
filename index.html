@@ -9,7 +9,7 @@
     <title>حساباتي الشخصية</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             padding: 50px 20px;
         }
@@ -37,13 +37,15 @@
         .acounts {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .tiktok,
         .whatsapp,
         .instagram,
         .Telegram,
-        .facebook {
+        .facebook,
+        .whatsapp-dini {
             display: block;
             border-radius: 8px;
             padding: 8px;
@@ -51,7 +53,7 @@
             margin: 10px;
             text-align: center;
             text-decoration: none;
-
+            transition: 0.3s;
         }
 
         .tiktok {
@@ -69,6 +71,16 @@
 
         .whatsapp:hover {
             background-color: rgb(0, 255, 0);
+            color: white;
+        }
+
+        .whatsapp-dini {
+            border: 2px solid #25D366;
+            background-color: #eaffea;
+        }
+
+        .whatsapp-dini:hover {
+            background-color: #25D366;
             color: white;
         }
 
@@ -113,7 +125,6 @@
 
             .acounts a {
                 width: 80%;
-                /* عرض أكبر على الهاتف */
                 font-size: 18px;
             }
 
@@ -149,7 +160,7 @@
         </a>
 
         <a class="Telegram" href="https://t.me/YKHelhajar" target="_blank">
-            <i class="fab fa-telegram"></i> قناة التيليجرام
+            <i class="fab fa-telegram"></i> قناة التيليجرام للبرمجة
         </a>
 
         <a href="https://www.tiktok.com/@ysf_e1spa3y0" target="_blank" class="tiktok">
@@ -159,7 +170,17 @@
         <a href="https://www.instagram.com/ysfelspa3y?igsh=NDZhM2p2NW9jb2o=" target="_blank" class="instagram">
             <i class="fab fa-instagram"></i> إنستغرام
         </a>
+       <a href="https://wa.me/201007166173" target="_blank" class="whatsapp-dini">
+            <i class="fab fa-whatsapp"></i> واتساب
+       </a>
+        <!-- زر الواتساب الديني -->
+        <a href="https://whatsapp.com/channel/0029VaxwtcsI7BeIcziTRr11" target="_blank" class="whatsapp-dini">
+            <i class="fab fa-whatsapp"></i> قناتي الدينية على واتساب
+        </a>
     </div>
+
+    <!-- إضافة العبارة قبل الدعوة -->
+    <p class="subscribe">متنساش تصلي على النبي 🤍</p>
     <p class="subscribe">فضلاً وليس أمراً، تابعني ❤️</p>
 
 </body>

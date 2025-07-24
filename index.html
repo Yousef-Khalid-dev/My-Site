@@ -1,188 +1,253 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>حساباتي الشخصية</title>
-    <style>
-        body {
-            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding: 50px 20px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>يوسف خالد | مطور ومصمم</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Tajawal', sans-serif;
+    }
 
-        img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 4px solid #8800ff;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
+    body {
+      background: radial-gradient(#2c003e, #0d001a);
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+      overflow-x: hidden;
+    }
 
-        h1 {
-            color: #8800ff;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+    .clouds {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
 
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
+    .cloud {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      position: absolute;
+      animation: moveClouds 60s linear infinite;
+    }
 
-        .acounts {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    .cloud1 { width: 200px; height: 100px; top: 50px; left: -200px; }
+    .cloud2 { width: 300px; height: 120px; top: 150px; left: -300px; animation-delay: 20s; }
+    .cloud3 { width: 250px; height: 110px; top: 250px; left: -250px; animation-delay: 40s; }
 
-        .tiktok,
-        .whatsapp,
-        .instagram,
-        .Telegram,
-        .facebook,
-        .whatsapp-dini {
-            display: block;
-            border-radius: 8px;
-            padding: 8px;
-            width: 112px;
-            margin: 10px;
-            text-align: center;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+    @keyframes moveClouds {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(150vw); }
+    }
 
-        .tiktok {
-            border: 2px solid black;
-        }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
 
-        .tiktok:hover {
-            background-color: black;
-            color: white;
-        }
+    .hero h1 {
+      font-size: 3rem;
+      color: #b300ff;
+      text-shadow: 0 0 20px #b300ff;
+    }
 
-        .whatsapp {
-            border: 2px solid rgb(0, 255, 0);
-        }
+    .hero p {
+      font-size: 1.4rem;
+      margin-top: 10px;
+      color: #ccc;
+    }
 
-        .whatsapp:hover {
-            background-color: rgb(0, 255, 0);
-            color: white;
-        }
+    .hero button {
+      margin-top: 30px;
+      padding: 10px 30px;
+      font-size: 1rem;
+      border: none;
+      background: #b300ff;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 20px #b300ff;
+    }
 
-        .whatsapp-dini {
-            border: 2px solid #25D366;
-            background-color: #eaffea;
-        }
+    .hero button:hover {
+      background: #a000e6;
+      box-shadow: 0 0 30px #b300ff;
+    }
 
-        .whatsapp-dini:hover {
-            background-color: #25D366;
-            color: white;
-        }
+    section {
+      position: relative;
+      z-index: 1;
+    }
 
-        .instagram {
-            border: 2px solid purple;
-        }
+    .about, .skills-section, .social {
+      padding: 60px 20px;
+      background-color: #1a0033;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
 
-        .instagram:hover {
-            background-color: purple;
-            color: white;
-        }
+    .about h2,
+    .skills-section h2,
+    .social h2 {
+      font-size: 2rem;
+      color: #ffccff;
+      margin-bottom: 20px;
+    }
 
-        .Telegram {
-            border: 2px solid rgb(0, 68, 255);
-        }
+    .about p,
+    .skills-section p {
+      font-size: 1.1rem;
+      color: #ccc;
+      line-height: 1.8;
+    }
 
-        .Telegram:hover {
-            background-color: rgb(0, 68, 255);
-            color: white;
-        }
+    .skills-section p {
+      margin: 6px 0;
+    }
 
-        .facebook {
-            border: 2px solid rgb(0, 4, 255);
-        }
+    .acounts {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-        .facebook:hover {
-            background-color: rgb(0, 4, 255);
-            color: white;
-        }
+    .acounts a {
+      border: 2px solid #fff;
+      border-radius: 8px;
+      padding: 10px;
+      width: 140px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+      font-size: 16px;
+    }
 
-        .subscribe {
-            margin-top: 30px;
-            font-size: 16px;
-        }
+    .facebook { border-color: #1877f2; }
+    .facebook:hover { background: #1877f2; }
 
-        /* Media Query للهواتف */
-        @media (max-width: 600px) {
-            .acounts {
-                flex-direction: column;
-                align-items: center;
-            }
+    .Telegram { border-color: #0088cc; }
+    .Telegram:hover { background: #0088cc; }
 
-            .acounts a {
-                width: 80%;
-                font-size: 18px;
-            }
+    .tiktok { border-color: #000; }
+    .tiktok:hover { background: #000; }
 
-            img {
-                width: 120px;
-                height: 120px;
-            }
+    .instagram { border-color: purple; }
+    .instagram:hover { background: purple; }
 
-            h1 {
-                font-size: 22px;
-            }
+    .whatsapp-dini { border-color: #25D366; background-color: #eaffea; color: #222; }
+    .whatsapp-dini:hover { background-color: #25D366; color: white; }
 
-            p {
-                font-size: 16px;
-            }
+    .subscribe {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #ccc;
+    }
 
-            .subscribe {
-                font-size: 15px;
-            }
-        }
-    </style>
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .hero button { font-size: 0.9rem; }
+
+      .acounts a {
+        width: 80%;
+        font-size: 17px;
+      }
+
+      .about h2,
+      .skills-section h2,
+      .social h2 {
+        font-size: 1.5rem;
+      }
+
+      .about p,
+      .skills-section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <!-- الخلفية -->
+  <div class="clouds">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+  </div>
 
-    <img src="media/صورة.jpg" alt="صورة شخصية" />
+  <!-- الصفحة الرئيسية -->
+  <section class="hero">
     <h1>يوسف خالد</h1>
-    <p>موقعي الرسمي وروابط حساباتي</p>
+    <p>مصمم ومطور مواقع إلكترونية</p>
+    <button onclick="scrollToAbout()">اعرف أكثر</button>
+  </section>
 
+  <!-- نبذة -->
+  <section class="about" id="about">
+    <h2>من هو يوسف؟</h2>
+    <p>
+      طالب ثانوية عامة ومبرمج مبتدئ، أهوى تطوير الواجهات وتصميم المواقع وتصميم البوتات للواتساب وأسعى لبناء مستقبل رقمي مميز.
+    </p>
+  </section>
+
+  <!-- المهارات -->
+  <section class="skills-section">
+    <h2>المهارات واللغات</h2>
+    <p>🔸 HTML</p>
+    <p>🔸 CSS (تحت التعليم)</p>
+    <p>🔸 JavaScript (تحت التعليم)</p>
+    <p>🔸 PHP (قريبًا)</p>
+    <p>🎨 تصميم مواقع بسيطة</p>
+    <p>🎨تصميم بوتات للواتساب Aizen_Bot</p>
+    <p>🎂 العمر: ١٧ سنة</p>
+  </section>
+
+  <!-- حساباتي -->
+  <section class="social">
+    <h2>روابط حساباتي</h2>
     <div class="acounts">
-        <a class="facebook" href="https://www.facebook.com/share/14H26egVfCj/" target="_blank">
-            <i class="fab fa-facebook"></i> فيسبوك
-        </a>
-
-        <a class="Telegram" href="https://t.me/YKHelhajar" target="_blank">
-            <i class="fab fa-telegram"></i> قناة التيليجرام للبرمجة
-        </a>
-
-        <a href="https://www.tiktok.com/@ysf_e1spa3y0" target="_blank" class="tiktok">
-            <i class="fab fa-tiktok"></i> تيك توك
-        </a>
-
-        <a href="https://www.instagram.com/ysfelspa3y?igsh=NDZhM2p2NW9jb2o=" target="_blank" class="instagram">
-            <i class="fab fa-instagram"></i> إنستغرام
-        </a>
-       <a href="https://wa.me/201007166173" target="_blank" class="whatsapp-dini">
-            <i class="fab fa-whatsapp"></i> واتساب
-       </a>
-        <!-- زر الواتساب الديني -->
-        <a href="https://whatsapp.com/channel/0029VaxwtcsI7BeIcziTRr11" target="_blank" class="whatsapp-dini">
-            <i class="fab fa-whatsapp"></i> قناتي الدينية على واتساب
-        </a>
+      <a class="facebook" href="https://www.facebook.com/share/14H26egVfCj/" target="_blank">
+        <i class="fab fa-facebook"></i> فيسبوك
+      </a>
+      <a class="Telegram" href="https://t.me/YKHelhajar" target="_blank">
+        <i class="fab fa-telegram"></i> تيليجرام برمجة
+      </a>
+      <a class="tiktok" href="https://www.tiktok.com/@ysf_e1spa3y0" target="_blank">
+        <i class="fab fa-tiktok"></i> تيك توك
+      </a>
+      <a class="instagram" href="https://www.instagram.com/ysfelspa3y" target="_blank">
+        <i class="fab fa-instagram"></i> إنستغرام
+      </a>
+      <a class="whatsapp-dini" href="https://wa.me/201007166173" target="_blank">
+        <i class="fab fa-whatsapp"></i> واتساب
+      </a>
+      <a class="whatsapp-dini" href="https://whatsapp.com/channel/0029VaxwtcsI7BeIcziTRr11" target="_blank">
+        <i class="fab fa-whatsapp"></i> قناة دينية
+      </a>
     </div>
 
-    <!-- إضافة العبارة قبل الدعوة -->
     <p class="subscribe">متنساش تصلي على النبي 🤍</p>
     <p class="subscribe">فضلاً وليس أمراً، تابعني ❤️</p>
+  </section>
 
+  <script>
+    function scrollToAbout() {
+      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 </body>
-
+</html>
 </html>

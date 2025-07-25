@@ -30,6 +30,7 @@
       align-items: center;
       position: relative;
       z-index: 1;
+      padding: 0 10px;
     }
 
     .hero h1 {
@@ -60,49 +61,25 @@
     .hero button:hover {
       background: #a000e6;
       box-shadow: 0 0 30px #b300ff;
+      transform: scale(1.05);
     }
 
     section {
       position: relative;
       z-index: 1;
-    }
-
-    .wave-container {
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      margin-top: -10px;
-    }
-
-    .moving-wave {
-      position: relative;
-      width: 200%;
-      height: 100px;
-      animation: waveMotion 60s linear infinite;
-    }
-
-    @keyframes waveMotion {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .about, .skills-section, .social {
       padding: 60px 20px;
       background-color: #1a0033;
       margin-top: 20px;
       border-radius: 12px;
     }
 
-    .about h2,
-    .skills-section h2,
-    .social h2 {
+    h2 {
       font-size: 2rem;
       color: #ffccff;
       margin-bottom: 20px;
     }
 
-    .about p,
-    .skills-section p {
+    p {
       font-size: 1.1rem;
       color: #ccc;
       line-height: 1.8;
@@ -143,8 +120,14 @@
     .instagram { border-color: purple; }
     .instagram:hover { background: purple; }
 
-    .whatsapp-dini { border-color: #25D366; background-color: #eaffea; color: #222; }
-    .whatsapp-dini:hover { background-color: #25D366; color: white; }
+    .whatsapp {
+      border-color: #25D366;
+    }
+
+    .whatsapp:hover {
+      background-color: #25D366;
+      color: white;
+    }
 
     .subscribe {
       margin-top: 30px;
@@ -158,18 +141,15 @@
       .hero button { font-size: 0.9rem; }
 
       .acounts a {
-        width: 80%;
-        font-size: 17px;
+        width: 100%;
+        font-size: 16px;
       }
 
-      .about h2,
-      .skills-section h2,
-      .social h2 {
+      h2 {
         font-size: 1.5rem;
       }
 
-      .about p,
-      .skills-section p {
+      p {
         font-size: 1rem;
       }
     }
@@ -184,17 +164,8 @@
     <button onclick="scrollToAbout()">اعرف أكثر</button>
   </section>
 
-  <!-- موجة SVG متحركة -->
-  <div class="wave-container">
-    <svg class="moving-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
-      <path fill="rgba(0, 0, 0, 0.4)" 
-        d="M0,160L80,186.7C160,213,320,267,480,272C640,277,800,235,960,218.7C1120,203,1280,213,1360,218.7L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
-      </path>
-    </svg>
-  </div>
-
   <!-- نبذة -->
-  <section class="about" id="about">
+  <section id="about">
     <h2>من هو يوسف؟</h2>
     <p>
       طالب ثانوية عامة ومبرمج مبتدئ، أهوى تطوير الواجهات وتصميم المواقع وتصميم البوتات للواتساب وأسعى لبناء مستقبل رقمي مميز.
@@ -217,26 +188,13 @@
   <section class="social">
     <h2>روابط حساباتي</h2>
     <div class="acounts">
-      <a class="facebook" href="https://www.facebook.com/share/14H26egVfCj/" target="_blank">
-        <i class="fab fa-facebook"></i> فيسبوك
-      </a>
-      <a class="Telegram" href="https://t.me/YKHelhajar" target="_blank">
-        <i class="fab fa-telegram"></i> تيليجرام برمجة
-      </a>
-      <a class="tiktok" href="https://www.tiktok.com/@ysf_e1spa3y0" target="_blank">
-        <i class="fab fa-tiktok"></i> تيك توك
-      </a>
-      <a class="instagram" href="https://www.instagram.com/ysfelspa3y" target="_blank">
-        <i class="fab fa-instagram"></i> إنستغرام
-      </a>
-      <a class="whatsapp-dini" href="https://wa.me/201007166173" target="_blank">
-        <i class="fab fa-whatsapp"></i> واتساب
-      </a>
-      <a class="whatsapp-dini" href="https://whatsapp.com/channel/0029VaxwtcsI7BeIcziTRr11" target="_blank">
-        <i class="fab fa-whatsapp"></i> قناة دينية
-      </a>
+      <a class="facebook" href="https://www.facebook.com/share/14H26egVfCj/" target="_blank"><i class="fab fa-facebook"></i> فيسبوك</a>
+      <a class="Telegram" href="https://t.me/YKHelhajar" target="_blank"><i class="fab fa-telegram"></i> تيليجرام برمجة</a>
+      <a class="tiktok" href="https://www.tiktok.com/@ysf_e1spa3y0" target="_blank"><i class="fab fa-tiktok"></i> تيك توك</a>
+      <a class="instagram" href="https://www.instagram.com/ysfelspa3y" target="_blank"><i class="fab fa-instagram"></i> إنستغرام</a>
+      <a class="whatsapp" href="https://wa.me/201007166173" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
+      <a class="whatsapp" href="https://whatsapp.com/channel/0029VaxwtcsI7BeIcziTRr11" target="_blank"><i class="fab fa-whatsapp"></i> قناة دينية</a>
     </div>
-
     <p class="subscribe">متنساش تصلي على النبي 🤍</p>
     <p class="subscribe">فضلاً وليس أمراً، تابعني ❤️</p>
   </section>
@@ -246,5 +204,6 @@
       document.getElementById("about").scrollIntoView({ behavior: "smooth" });
     }
   </script>
+
 </body>
 </html>
